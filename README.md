@@ -1,2 +1,3 @@
 # QCPD-quantum-cognitive-pneumonia
-A novel hybrid quantum machine learning architecture for medical imaging. It uses a ResNet18 backbone paired with QSNN and QLSTM layers, which mimic the Hypothalamus and Hippocampus, to detect pneumonia in chest X-rays.
+Hybrid Quantum-Cognitive Architecture for Pneumonia Detection
+This repository contains a hybrid classical-quantum machine learning model designed to detect pneumonia from chest X-ray images. Built using PyTorch and PennyLane , the architecture combines a classical ResNet18 feature extractor with a 4-qubit quantum neural network bridge. Uniquely, the quantum layers are biologically inspired, featuring a Quantum Spiking Neural Network (QSNN) simulating the Hypothalamus via data re-uploading , and a Quantum Long Short-Term Memory (QLSTM) network simulating the Hippocampus using controlled gating.

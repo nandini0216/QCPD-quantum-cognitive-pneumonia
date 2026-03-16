@@ -5,7 +5,7 @@
 ![PennyLane](https://img.shields.io/badge/PennyLane-Quantum%20ML-000000)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-A novel hybrid classical-quantum machine learning (HQML) model designed to detect pneumonia from chest X-ray images. This architecture combines a classical ResNet18 feature extractor with a biologically-inspired 4-qubit quantum neural network bridge, achieving high accuracy while offering robust Explainable AI (XAI) visualizations.
+A novel hybrid classical-quantum machine learning model designed to detect pneumonia from chest X-ray images. This architecture combines a classical ResNet18 feature extractor with a biologically-inspired quantum neural network bridge, achieving high accuracy while offering robust Explainable AI (XAI) visualizations.
 
 ## 🧠 Architecture Overview
 
@@ -29,12 +29,12 @@ The model was evaluated on the chest-xray-pneumonia dataset and achieved the fol
 
 | Metric | Score |
 | :--- | :--- |
-| **Accuracy** | 90.87% |
-| **Recall (Sensitivity)** | 95.64% |
-| **Precision** | 90.31% |
-| **F1 Score** | 0.9290 |
-| **Specificity** | 82.91% |
-| **ROC AUC** | 0.9239 |
+| **Accuracy** | 91.83% |
+| **Recall (Sensitivity)** | 95.38% |
+| **Precision** | 91.85% |
+| **F1 Score** | 0.9358 |
+| **Specificity** | 85.90% |
+| **ROC AUC** | 0.9224 |
 
 *Estimated Inference Latency: ~109.82 ms / image (CPU)*
 

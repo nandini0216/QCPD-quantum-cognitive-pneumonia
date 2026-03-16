@@ -9,6 +9,8 @@ A novel hybrid classical-quantum machine learning model designed to detect pneum
 
 ## 🧠 Architecture Overview
 
+![Hybrid Quantum-Cognitive Architecture](Quantum%20Architecture%20Diagram%20QSNN%20+%20QLSTM.png)
+
 This project mimics biological brain functions using quantum circuits to process complex medical imaging data:
 * **Classical Backbone:** A pretrained ResNet18 model extracts high-level features from chest X-rays, which are then compressed into a 4-qubit quantum state.
 * **QSNN (Hypothalamus):** A Quantum Spiking Neural Network utilizing RX encoding and a "Data Re-uploading" mechanism to simulate temporal summation in biological neurons.

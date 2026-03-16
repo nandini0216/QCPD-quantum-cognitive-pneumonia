@@ -1,3 +1,54 @@
-# QCPD-quantum-cognitive-pneumonia
-Hybrid Quantum-Cognitive Architecture for Pneumonia Detection
-This repository contains a hybrid classical-quantum machine learning model designed to detect pneumonia from chest X-ray images. Built using PyTorch and PennyLane , the architecture combines a classical ResNet18 feature extractor with a 4-qubit quantum neural network bridge. Uniquely, the quantum layers are biologically inspired, featuring a Quantum Spiking Neural Network (QSNN) simulating the Hypothalamus via data re-uploading , and a Quantum Long Short-Term Memory (QLSTM) network simulating the Hippocampus using controlled gating.
+# Quantum-Cognitive Pneumonia Detection: Hybrid QSNN-QLSTM Architecture
+
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-ee4c2c)
+![PennyLane](https://img.shields.io/badge/PennyLane-Quantum%20ML-000000)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+A novel hybrid classical-quantum machine learning (HQML) model designed to detect pneumonia from chest X-ray images. This architecture combines a classical ResNet18 feature extractor with a biologically-inspired 4-qubit quantum neural network bridge, achieving high accuracy while offering robust Explainable AI (XAI) visualizations.
+
+## 🧠 Architecture Overview
+
+This project mimics biological brain functions using quantum circuits to process complex medical imaging data:
+* **Classical Backbone:** A pretrained ResNet18 model extracts high-level features from chest X-rays, which are then compressed into a 4-qubit quantum state.
+* **QSNN (Hypothalamus):** A Quantum Spiking Neural Network utilizing RX encoding and a "Data Re-uploading" mechanism to simulate temporal summation in biological neurons.
+* **QLSTM (Hippocampus):** A Quantum Long Short-Term Memory network utilizing RY encoding and CRX/CRY controlled gating to mimic memory and forget/input gates.
+
+## ✨ Key Features
+
+* **Advanced Data Augmentation:** Implements Contrast Limited Adaptive Histogram Equalization (CLAHE) for local contrast enhancement, alongside random affine transformations to prevent overfitting.
+* **Class Imbalance Handling:** Utilizes PyTorch's `WeightedRandomSampler` to effectively manage the inherent imbalances in medical datasets.
+* **Explainable AI (XAI) Suite:** Includes custom visualizers to interpret the model's decision-making process:
+  * **Classical Grad-CAM:** Highlights classical feature attention.
+  * **Landmark Analysis:** Extracts precise Regions of Interest (ROI) via bounding boxes.
+  * **Quantum Attention:** Generates smoothed saliency maps to visualize the quantum layer's focus.
+
+## 📊 Model Performance
+
+The model was evaluated on the chest-xray-pneumonia dataset and achieved the following metrics on the test set (Threshold: 0.97):
+
+| Metric | Score |
+| :--- | :--- |
+| **Accuracy** | 90.87% |
+| **Recall (Sensitivity)** | 95.64% |
+| **Precision** | 90.31% |
+| **F1 Score** | 0.9290 |
+| **Specificity** | 82.91% |
+| **ROC AUC** | 0.9239 |
+
+*Estimated Inference Latency: ~109.82 ms / image (CPU)*
+
+## 🛠️ Tech Stack
+* **Deep Learning:** PyTorch, Torchvision, MONAI
+* **Quantum Computing:** PennyLane (`default.qubit`)
+* **Data Processing & Vision:** OpenCV, PIL, NumPy, Pandas
+* **Visualization:** Matplotlib, Seaborn
+* **Metrics:** Scikit-learn
+
+## 🚀 Getting Started
+
+### Prerequisites
+Ensure you have Python 3.8+ installed. Install the required dependencies using pip:
+
+```bash
+pip install torch torchvision pennylane opencv-python numpy pandas matplotlib seaborn scikit-learn monai kagglehub
